@@ -1,0 +1,54 @@
+
+<h1>Sales </h1>
+
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Folio Number</label>
+        <input type="text" [(ngModel)]="newSale.FOLIO_NUMBER" name="FolioNumber"
+               class="form-control" id="exampleInputEmail1" placeholder="Folio Number"
+               [disabled] ="buttonAction =='edit'">
+    </div>
+    <div class="form-group">
+        <label for="datepicker">Sale Date</label>
+        <input type="date" [ngModel]="newSale.SALE_DATE | date:'yyyy-MM-dd'"
+               (ngModelChange)="newSale.SALE_DATE = $event" name="SaleDate"
+               class="form-control" id="datepicker" placeholder="Sale Date">
+        
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Sale Amount</label>
+        <input type="text" [(ngModel)]="newSale.SALE_AMOUNT" name="SaleAmount"  class="form-control" id="exampleInputEmail1" placeholder="Sale Amount">
+    </div>
+    
+    <button (click)="saveSale()" type="submit" class="btn btn-success">Save</button>
+    <button type="reset" class="btn btn-default" (click)="resetForm()" > Cancel</button>
+    </form>
+    <br>
+    <div class="row">
+        <div class="input-group">
+            <input type="text" [(ngModel)]="searchQuery" class="form-control" placeholder="Search" name="q">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="button" (click)="getAllSales()"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        <br>
+        <table class="table table-striped">
+                <tr>
+                    <td>Folio Number</td>
+                    <td>Sale Date</td>
+                    <td>Sale Amount</td>
+                    <td>Actions</td>
+                </tr>
+                <tr *ngFor="let item of salesList">
+                    <td> {{item.FOLIO_NUMBER}} </td>
+                    <td> {{item.SALE_DATE}} </td>
+                    <td> {{item.SALE_AMOUNT}} </td>
+                    <td>
+                        <a href="#" (click)="selectSale(item)"> Edit</a>
+                        <a href="#" (click)="deleteSale(item)">Delete</a>
+                    </td>
+                </tr>
+            </table>
+    </div>
+
+

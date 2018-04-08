@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCSalesAPI", "MVCSalesAPI\MVCSalesAPI.csproj", "{A8B7C21F-7896-4442-B5C5-A8FE549B48B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8B7C21F-7896-4442-B5C5-A8FE549B48B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B7C21F-7896-4442-B5C5-A8FE549B48B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B7C21F-7896-4442-B5C5-A8FE549B48B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B7C21F-7896-4442-B5C5-A8FE549B48B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12F602D7-BA04-40F2-B554-9A1BC058CCFF}
+	EndGlobalSection
+EndGlobal
